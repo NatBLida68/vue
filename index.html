@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/bootstrap.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VueJS Tutorial</title>
@@ -8,9 +9,12 @@
 
 </head>
 <body>
-
-
-
+<div id="app">
+    <div v-html="titleHTML"></div>
+    <div v-html="btn" v-on:[event_alpha]="eventAlpha"></div>
+    <div v-bind:class="dynamicClass" v-bind:id="dynamicId">Dinamically assign a class and an id to the div</div>
+    <button v-bind:disabled="disabled">Disabled button</button>
+</div>
 <script src="js/custom.js"></script>
 </body>
 </html>
